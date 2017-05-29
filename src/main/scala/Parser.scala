@@ -6,6 +6,7 @@ object Parser {
   private val isFunc = Map("abs" -> true, "sin" -> true, "cos" -> true, "tan" -> true, "sqrt" -> true).withDefaultValue(false)
 
   def isOperation(op: String) = getPrecedence(op) != 0
+
   def isFunction(func: String) = isFunc(func)
 
   private def isNumeric(str: String): Boolean = str.matches("[-+]?\\d+(\\.\\d+)?")
@@ -70,7 +71,9 @@ object Parser {
         case (prec: Int) => {
           var break: Boolean = false
           var precNext: Int = 0
-          while (!break && !stack.isEmpty() && {precNext = getPrecedence(stack.peek()); precNext != 0}) {
+          while (!break && !stack.isEmpty() && {
+            precNext = getPrecedence(stack.peek()); precNext != 0
+          }) {
             if (prec < precNext || (prec == precNext && !isRightAssociate(token)))
               output.append(stack.pop())
             else break = true

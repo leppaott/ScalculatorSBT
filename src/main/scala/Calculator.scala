@@ -15,8 +15,8 @@ object Calculator {
 
     def handleToken(token: String): Unit = {
       if (isOp(token)) {
-        val left: Double = stack.pop().toDouble
         val right: Double = stack.pop().toDouble
+        val left: Double = stack.pop().toDouble
         stack.push(op(token)(left, right).toString)
       } else if (isFunc(token)) {
         stack.push(func(token)(stack.pop().toDouble).toString)
