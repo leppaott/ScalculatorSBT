@@ -19,7 +19,7 @@ object Parser {
     if (str.length() == 0) return tokens
 
     def getType(c: Char, prevType: Int): Int = {
-      if (c.isDigit || c.equals('.')) return 1
+      if (c.isDigit || c.equals('.') || c.equals('-')) return 1
       else if (isOperation(c.toString())) return 2
       else if (c.isLetter) return 3
       else if (prevType == 5) return 4 //when parentheses "))"
