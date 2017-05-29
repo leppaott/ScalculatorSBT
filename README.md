@@ -1,5 +1,5 @@
 # ScalculatorSBT
-A Scala command line calculator using shunting-yard algorithm (not very Scala-like), SBT and ScalaTest. 
+A Scala command line calculator using shunting-yard algorithm (not very Scala-like implementation), SBT and ScalaTest. 
 
 ## Example
 >2 * ((3 * 2) + 5)
