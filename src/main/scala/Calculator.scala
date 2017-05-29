@@ -12,7 +12,7 @@ object Calculator {
   def evaluate(infix: String): String = {
     val stack: SimpleStack[String] = SimpleStack()
     val rpn: ArrayBuffer[String] = Parser.parse(infix)
-    println(rpn)
+
     def handleToken(token: String): Unit = {
       if (isOp(token)) {
         val right: Double = stack.pop().toDouble
