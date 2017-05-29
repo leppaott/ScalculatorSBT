@@ -12,6 +12,9 @@ A Scala command line calculator using shunting-yard algorithm (not very Scala-li
 
 ## Supports
 >parentheses
+
 >operations +, -, *, /, ^ (exponentation)
+
 >functions sqrt, abs, sin, cos, tan (one argument)
+
 >range of values is that of Double
