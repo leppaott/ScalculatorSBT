@@ -3,9 +3,11 @@ A Scala command line calculator using shunting-yard algorithm (not very Scala-li
 
 ## Example
 >2 * ((3 * 2) + 5)
+
 >22
 
 >sqrt(2/5)^2 * abs(-1)
+
 >0.4
 
 ## Supports
